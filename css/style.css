@@ -77,16 +77,11 @@ body {
   margin-top: 15px;
 }
 #article-toc {
-  display: none;
+  display: block;
   float: right;
   width: 100%;
 /*margin-right: sidebar-width * -1*/
   opacity: 0.8;
-}
-@media screen and (min-width: 769px) {
-  #article-toc {
-    display: block;
-  }
 }
 #article-toc.fixed {
   position: absolute;
@@ -131,14 +126,25 @@ body {
 #article-toc-top:hover {
   color: color-link-hover;
 }
-ol,
-ul {
-  list-style: none;
-}
 ol.toc,
 ul.toc {
+  list-style: none;
   padding-left: 0;
 }
 .content-wrap img {
   max-width: 100%;
+}
+#sidebar.fixed {
+  position: absolute;
+  top: 20;
+  bottom: 0;
+}
+#sidebar.fixed .inner {
+  margin-top: 20px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+#sidebar .inner {
+  overflow-y: auto;
 }
