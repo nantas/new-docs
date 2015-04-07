@@ -33,7 +33,7 @@ body {
 }
 @media screen and (min-width: 1100px) {
   .container {
-    width: 1076px;
+    width: 1096px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -79,8 +79,8 @@ body {
 #article-toc {
   display: none;
   float: right;
-  width: 200px;
-  margin-right: -200px;
+  width: 100%;
+/*margin-right: sidebar-width * -1*/
   opacity: 0.8;
 }
 @media screen and (min-width: 769px) {
@@ -92,7 +92,7 @@ body {
   position: absolute;
   top: 20;
   bottom: 0;
-  right: 295px;
+/*right: sidebar-width + 95*/
 }
 #article-toc-inner {
 /*@extend .inner*/
@@ -138,4 +138,7 @@ ul {
 ol.toc,
 ul.toc {
   padding-left: 0;
+}
+.content-wrap img {
+  max-width: 100%;
 }
